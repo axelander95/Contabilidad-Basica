@@ -7,12 +7,16 @@ public class MainFrame extends javax.swing.JFrame {
     private final TransaccionesFrame transaccionesFrame;
     private final LibroDiarioFrame libroDiarioFrame;
     private final BalanceSaldosFrame mayorizacionFrame;
+    private final ConfiguracionFrame configuracionFrame;
+    private final BGERFrame bgerFrame;
     public MainFrame() {
         initComponents();
         cuentasFrame = new CuentasFrame();
         transaccionesFrame = new TransaccionesFrame();
         libroDiarioFrame = new LibroDiarioFrame();
         mayorizacionFrame = new BalanceSaldosFrame();
+        configuracionFrame = new ConfiguracionFrame();
+        bgerFrame = new BGERFrame();
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -21,15 +25,16 @@ public class MainFrame extends javax.swing.JFrame {
         jdpMain = new javax.swing.JDesktopPane();
         jmbMain = new javax.swing.JMenuBar();
         jmnArchivo = new javax.swing.JMenu();
-        jmiGuardar = new javax.swing.JMenuItem();
-        jsGuardar = new javax.swing.JPopupMenu.Separator();
         jmiSalir = new javax.swing.JMenuItem();
         jmnDatos = new javax.swing.JMenu();
         jmiCuentas = new javax.swing.JMenuItem();
         jMenuItem1 = new javax.swing.JMenuItem();
+        jsConfiguracion = new javax.swing.JPopupMenu.Separator();
+        jmnConfiguracion = new javax.swing.JMenuItem();
         jmnGenerar = new javax.swing.JMenu();
         jmnLibroDiario = new javax.swing.JMenuItem();
         jmnBalanceSaldos = new javax.swing.JMenuItem();
+        jmnBGER = new javax.swing.JMenuItem();
         jmnAyuda = new javax.swing.JMenu();
         jmiAcercaDe = new javax.swing.JMenuItem();
 
@@ -39,12 +44,6 @@ public class MainFrame extends javax.swing.JFrame {
 
         jmnArchivo.setMnemonic('A');
         jmnArchivo.setText("Archivo");
-
-        jmiGuardar.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_G, java.awt.event.InputEvent.CTRL_MASK));
-        jmiGuardar.setMnemonic('u');
-        jmiGuardar.setText("Guardar");
-        jmnArchivo.add(jmiGuardar);
-        jmnArchivo.add(jsGuardar);
 
         jmiSalir.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
         jmiSalir.setMnemonic('a');
@@ -80,6 +79,16 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
         jmnDatos.add(jMenuItem1);
+        jmnDatos.add(jsConfiguracion);
+
+        jmnConfiguracion.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_MASK));
+        jmnConfiguracion.setText("Configuración");
+        jmnConfiguracion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmnConfiguracionActionPerformed(evt);
+            }
+        });
+        jmnDatos.add(jmnConfiguracion);
 
         jmbMain.add(jmnDatos);
 
@@ -106,11 +115,21 @@ public class MainFrame extends javax.swing.JFrame {
         });
         jmnGenerar.add(jmnBalanceSaldos);
 
+        jmnBGER.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_R, java.awt.event.InputEvent.CTRL_MASK));
+        jmnBGER.setText("Estado de Resultados y Balance General");
+        jmnBGER.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmnBGERActionPerformed(evt);
+            }
+        });
+        jmnGenerar.add(jmnBGER);
+
         jmbMain.add(jmnGenerar);
 
         jmnAyuda.setMnemonic('u');
         jmnAyuda.setText("Ayuda");
 
+        jmiAcercaDe.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Y, java.awt.event.InputEvent.CTRL_MASK));
         jmiAcercaDe.setMnemonic('e');
         jmiAcercaDe.setText("Acerca de...");
         jmiAcercaDe.addActionListener(new java.awt.event.ActionListener() {
@@ -163,6 +182,14 @@ public class MainFrame extends javax.swing.JFrame {
                 "Acerca de Contabilidad Básica", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_jmiAcercaDeActionPerformed
 
+    private void jmnConfiguracionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmnConfiguracionActionPerformed
+        mostrarFrameHijo(configuracionFrame);
+    }//GEN-LAST:event_jmnConfiguracionActionPerformed
+
+    private void jmnBGERActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmnBGERActionPerformed
+        mostrarFrameHijo(bgerFrame);
+    }//GEN-LAST:event_jmnBGERActionPerformed
+
     private void mostrarFrameHijo(JInternalFrame frame){
         if (!frame.isVisible()){
             jdpMain.add(frame);
@@ -178,14 +205,15 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JMenuBar jmbMain;
     private javax.swing.JMenuItem jmiAcercaDe;
     private javax.swing.JMenuItem jmiCuentas;
-    private javax.swing.JMenuItem jmiGuardar;
     private javax.swing.JMenuItem jmiSalir;
     private javax.swing.JMenu jmnArchivo;
     private javax.swing.JMenu jmnAyuda;
+    private javax.swing.JMenuItem jmnBGER;
     private javax.swing.JMenuItem jmnBalanceSaldos;
+    private javax.swing.JMenuItem jmnConfiguracion;
     private javax.swing.JMenu jmnDatos;
     private javax.swing.JMenu jmnGenerar;
     private javax.swing.JMenuItem jmnLibroDiario;
-    private javax.swing.JPopupMenu.Separator jsGuardar;
+    private javax.swing.JPopupMenu.Separator jsConfiguracion;
     // End of variables declaration//GEN-END:variables
 }

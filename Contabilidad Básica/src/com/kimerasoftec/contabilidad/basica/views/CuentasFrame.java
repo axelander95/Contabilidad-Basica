@@ -222,7 +222,7 @@ public class CuentasFrame extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnGuardarActionPerformed
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
-        restablecer();
+        dispose();
     }//GEN-LAST:event_btnCancelarActionPerformed
 
     private void jpmCuentasPopupMenuWillBecomeVisible(javax.swing.event.PopupMenuEvent evt) {//GEN-FIRST:event_jpmCuentasPopupMenuWillBecomeVisible

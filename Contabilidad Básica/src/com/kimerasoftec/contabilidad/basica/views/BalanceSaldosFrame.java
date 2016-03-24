@@ -55,7 +55,7 @@ public class BalanceSaldosFrame extends javax.swing.JInternalFrame {
                 java.lang.Integer.class, java.lang.String.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class
             };
             boolean[] canEdit = new boolean [] {
-                true, false, false, false, false
+                false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -78,6 +78,11 @@ public class BalanceSaldosFrame extends javax.swing.JInternalFrame {
         }
 
         btnCancelar.setText("Cancelar");
+        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelarActionPerformed(evt);
+            }
+        });
 
         btnExportar.setText("Exportar");
 
@@ -170,6 +175,10 @@ public class BalanceSaldosFrame extends javax.swing.JInternalFrame {
             mayorizacion.setVisible(true);
         }
     }//GEN-LAST:event_jtBalanceSaldosMouseClicked
+
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
+        dispose();
+    }//GEN-LAST:event_btnCancelarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
